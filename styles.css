@@ -1,0 +1,259 @@
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --accent: #8c7355;
+    --light-tan: #f9f7f5;
+    --border: #e5e5e5;
+    --nav-height: 70px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+a {
+    color: inherit;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+}
+
+header {
+    padding-top: 20px;
+}
+
+h1 {
+    font-size: 2.1rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin: 3rem 0 1.25rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    color: var(--accent);
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+.label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #666;
+    display: block;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+}
+
+.tagline {
+    font-size: 1.15rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.intro-text {
+    font-size: 1.08rem;
+    margin-bottom: 2rem;
+}
+
+.list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.list li {
+    margin-bottom: 0.9rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.service-card {
+    background: var(--light-tan);
+    padding: 2rem;
+    border-left: 3px solid var(--accent);
+}
+
+.service-meta {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+.service-meta strong {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #555;
+    margin-top: 0.75rem;
+    margin-bottom: 0.2rem;
+}
+
+.step {
+    margin-bottom: 1.5rem;
+}
+
+.step-title {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.expansion-statement {
+    font-style: italic;
+    background: #fdfdfd;
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    margin: 3rem 0;
+    font-size: 0.95rem;
+}
+
+.conversion-bridge {
+    margin-top: 2rem;
+    font-weight: 500;
+}
+
+.cta-section {
+    background: var(--text);
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.cta-section h2 {
+    border: none;
+    color: #fff;
+    margin-top: 0;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.contact-guide {
+    background: var(--light-tan);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 24px;
+    font-size: 0.85rem;
+    color: #666;
+    border-top: 1px solid var(--border);
+}
+
+@media (min-width: 700px) {
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+}
